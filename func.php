@@ -9,6 +9,9 @@
 function moneyToText($number, string $currency = 'TürkLirası', string $doit = 'Kuruş'): string
 {
 
+    $maxSupportedNumber = 999999999999.99;
+    ($number > $maxSupportedNumber) ? exit("Girmiş olduğunuz sayı desteklenmemektedir.") : "";
+    
     $numbers = [
         0 => '',
         1 => "Bir",
